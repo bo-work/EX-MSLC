@@ -2,7 +2,7 @@
 
 
 
-![ex-mslc8](https://github.com/bo-work/EX-MSLC/blob/main/ex-mslc.png)
+![ex-mslc8](https://github.com/bo-work/EX-MSLC/blob/main/ex-mslc8.png)
 
 
 
