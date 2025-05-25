@@ -26,7 +26,7 @@ CICIDS2018 with `N=[500, 100, 50]` sample:
 |    100    |  96.84  |  96.98   |  92.66  |  94.34   |
 |    50     |  96.51  |  96.64   |  91.12  |  93.36   |
 
-CICIDS2018 with `N=[500]` sample for undetected attack:
+CICIDS2018 with `N=[500]` sample for unannotated attack:
 
 Infiltration
 
@@ -50,13 +50,16 @@ pip install -r requirements.txt
 
 Before training the models please:
 
-1. Put the datasets in the `/data` . Origian dataset is [here](https://www.unb.ca/cic/datasets/ids-2018.html), and preprocessing data is [here](https://www.unb.ca/cic/datasets/ids-2018.html).
-2. You can use Pretrained model [here]() for warmup phase, and put them in the `/data`.
+1. Put the dataset in the `/data/CICIDS18` . 
+   1. Origian dataset is [here](https://www.unb.ca/cic/datasets/ids-2018.html) and put in `/data/CICIDS18/origindata`, run `python3 preprocess_ids18.py`;
+   2. Preprocessed data is [here](https://www.unb.ca/cic/datasets/ids-2018.html) and put in `/data/CICIDS18/noisedata`
+2. You can use Pretrained model [here]() for warmup phase, and put them in the `/results/models/warmup/IDS18`.
 
-```train
+train phase:
+```
 python exmslc.py
 ```
-
+paramaters can be set in `config.py`
 
 ## Contributing
 
