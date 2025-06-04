@@ -38,8 +38,6 @@ RAW_DATA_PATH = "./data/CICIDS18/origindata"
 UNNORMALIZED_SAVE_FOLDER = './data/CICIDS18/unnormalized'
 NOISEDATA_SAVE_FOLDER = './data/CICIDS18/origindata'
 
-SAVE_PATH = "/home/maybo/Documents/Project/Paper/etc-fusion-py/Tasks/draft-RLCor/dataset"
-
 NORMAL_FILES = ['Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv', 'Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv', 'Friday-16-02-2018_TrafficForML_CICFlowMeter.csv', 'Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv',
                 'Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv', 'Friday-23-02-2018_TrafficForML_CICFlowMeter.csv', 'Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv', 'Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv', 'Friday-02-03-2018_TrafficForML_CICFlowMeter.csv']
 
@@ -219,7 +217,7 @@ def clean_single_file(filename, is_specific=False, idxii=1):
 def stats():
     for file in NORMAL_FILES + SPECIFIC_FILES:
         print(f'stats for file: {file}')
-        file_path = os.path.join(SAVE_PATH, file + '.npz')
+        file_path = os.path.join(RAW_DATA_PATH, file + '.npz')
         data = np.load(file_path)
         y, y_name = data['y'], data['y_name']
         assigned_labels = Counter(label for label in y)

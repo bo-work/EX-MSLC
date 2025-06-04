@@ -145,7 +145,7 @@ class Data_Clean():
                 return clean_index, None
             else:
                 fluctuation_ = np.ones(self.datasize)
-                condition = (result == 0) | ((result != 0) & (self.memory_bank[-1] > result))
+                condition = (result == 0) | ((result != 0) & (self.memory_bank[-2] > result))
                 luctuation_index = np.where(condition)
                 fluctuation_[luctuation_index] = 0
 
